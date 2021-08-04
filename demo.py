@@ -46,4 +46,51 @@ else:
 print(tax)
 
 
+# If I enter 2.00 I should see the message "Tax rate is: 0.07" 
+# If I enter 1.00 I should see the message "Tax rate is: 0.07" 
+# If I enter 0.50 I should see the message "Tax rate is: 0" 
+price = input('how much did you pay? ')
+
+tax = 0
+
+if price > 1.00:
+	tax = .07
+	print('Tax rate is: ' + str(tax))
+else:
+    print('Tax rate is:' str(tax))
+	tax = 0
+
+print('Tax rate is: ' + str(tax))
+
+
+price = 5.0
+if price >= 1.00:
+	tax = .07
+else:
+	tax = 0
+
+print (tax)
+
+
+#Multiple Conditions #2
+# If their first name starts with A or B
+# tell them they go to room AB 
+# If their first name starts with another letter, ask for their last name
+# If their last name starts with Z, tell them to go to room Z
+first_letter = name[0:1]
+if first_letter.upper() in ('A','B'):
+    room = 'AB'
+# If their first name starts with C
+# tell them to go to room C
+elif first_letter.upper() == 'C':
+    room = 'C'
+else:
     
+    last_name = input('what is your last name? ')
+    last_name_first_letter = last_name[0:1]
+    # if their last name starts with any other letter, tell them to go to room OTHER
+    if last_name_first_letter == 'Z':
+        room = 'Z'
+    else:
+        room = 'OTHER'
+print('Please go to room ' + room)
